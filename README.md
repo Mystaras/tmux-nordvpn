@@ -8,7 +8,7 @@ Add the plugin to your `~/.tmux.conf` file.
 set -g @plugin 'Mystaras/tmux-nordvpn.git'
 ```
 
-Add the `#{pyenv_info}` format string to your status bar.
+Add the `#{nordvpn_status}` format string to your status bar.
 ```bash
 set -g status-right '#{nordvpn_status}'
 ```

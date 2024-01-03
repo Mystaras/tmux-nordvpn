@@ -41,7 +41,7 @@ if [ $NORD_STATUS == "Connected" ]; then
     NORD_COUNTRY=$(echo "$NORD_INFO" | grep -oP 'Country: \K[^ ]+')
     NORD_CITY=$(echo "$NORD_INFO" | grep -oP 'City: \K[^ ]+')
     NORD_COUNTRY_CODE=$(get_iso_code "$NORD_COUNTRY")
-    OUTPUT="${COLOR_BLUE}#[bold]${NORD_IP}#[nobold]${COLOR_NONE}${NORD_COUNRY} ${NORD_CITY}(#[bold]${NORD_COUNTRY_CODE}#[nobold])"
+    OUTPUT="${COLOR_BLUE}#[bold]${NORD_IP}#[nobold]${COLOR_NONE} ${NORD_CITY}#[bold][${NORD_COUNTRY_CODE}]#[nobold]"
 else
     OUTPUT="${COLOR_RED}NordVPN${COLOR_NONE}"
 fi
